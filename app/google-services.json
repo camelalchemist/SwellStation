@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "469736643058",
+    "firebase_url": "https://swellstation.firebaseio.com",
+    "project_id": "swellstation",
+    "storage_bucket": "swellstation.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:469736643058:android:b6f8144a741bf352",
+        "android_client_info": {
+          "package_name": "com.example.tylercichonski.swellstation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "469736643058-12jalehfng4qj14o837hovrqd88c7984.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tylercichonski.swellstation",
+            "certificate_hash": "bddfcbc2c4bb9d28e47f05d9580fbf1b52354e68"
+          }
+        },
+        {
+          "client_id": "469736643058-s12l5coi6g5vd2u982fomr1g5qphis1n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAj-SMjwQmWkSz-es2o6EdKxMUjRiKPvd8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "469736643058-s12l5coi6g5vd2u982fomr1g5qphis1n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

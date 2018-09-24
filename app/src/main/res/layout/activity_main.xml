@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/whiteBackgroundContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/white_screen_container" />
+
+    <ImageView
+        android:id="@+id/costBackground"
+        android:layout_width="700dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="40dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/amountDispensedBackground"
+        app:layout_constraintEnd_toEndOf="@+id/whiteBackgroundContainer"
+        app:layout_constraintStart_toStartOf="@+id/whiteBackgroundContainer"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/cost_container" />
+
+    <ImageView
+        android:id="@+id/amountDispensedBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        app:layout_constraintEnd_toEndOf="@+id/costBackground"
+        app:layout_constraintStart_toStartOf="@+id/costBackground"
+        app:layout_constraintTop_toBottomOf="@+id/costBackground"
+        app:srcCompat="@drawable/amount_dispensed_container" />
+
+    <TextView
+        android:id="@+id/amountDispensedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/amount_dispensed_background"
+        android:text="0.00"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="45sp"
+        app:layout_constraintBottom_toBottomOf="@+id/amountDispensedBackground"
+        app:layout_constraintEnd_toEndOf="@+id/amountDispensedBackground"
+        app:layout_constraintStart_toStartOf="@+id/amountDispensedBackground"
+        app:layout_constraintTop_toTopOf="@+id/amountDispensedBackground"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/costTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginRight="180dp"
+        android:background="@drawable/cost_background"
+        android:gravity="center"
+        android:lineSpacingExtra="36sp"
+        android:text="$0.00"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="72sp"
+        app:layout_constraintBottom_toBottomOf="@+id/costBackground"
+        app:layout_constraintEnd_toEndOf="@+id/costBackground"
+        app:layout_constraintStart_toStartOf="@+id/costBackground"
+        app:layout_constraintTop_toTopOf="@+id/costBackground" />
+
+    <TextView
+        android:id="@+id/saleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="SALE"
+        android:textColor="@android:color/black"
+        android:textSize="90sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/costBackground"
+        app:layout_constraintEnd_toEndOf="@+id/costBackground"
+        app:layout_constraintStart_toEndOf="@+id/costTextView"
+        app:layout_constraintTop_toTopOf="@+id/costBackground" />
+
+    <TextView
+        android:id="@+id/thisTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="THIS"
+        android:textColor="@android:color/black"
+        android:textSize="90sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:layout_constraintBottom_toBottomOf="@+id/costBackground"
+        app:layout_constraintEnd_toStartOf="@+id/costTextView"
+        app:layout_constraintStart_toStartOf="@+id/costBackground"
+        app:layout_constraintTop_toTopOf="@+id/costBackground" />
+
+    <TextView
+        android:id="@+id/ouncesTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="8dp"
+        android:text="OUNCES"
+        android:textAlignment="center"
+        android:textColor=" @android:color/black"
+        android:textSize="36dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/amountDispensedTextView"
+        app:layout_constraintEnd_toEndOf="@+id/amountDispensedBackground"
+        app:layout_constraintStart_toStartOf="@+id/amountDispensedBackground"
+        app:layout_constraintTop_toTopOf="@+id/amountDispensedBackground" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/pricePerOunceBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="115dp"
+        android:layout_marginTop="75dp"
+        app:layout_constraintEnd_toEndOf="@+id/amountDispensedBackground"
+        app:layout_constraintStart_toStartOf="@+id/amountDispensedBackground"
+        app:layout_constraintTop_toBottomOf="@+id/amountDispensedTextView"
+        app:srcCompat="@drawable/cost_per_ounce_background" />
+
+    <TextView
+        android:id="@+id/pricePerOunceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="8dp"
+        android:text="PRICE PER OUNCE"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/pricePerOunceBackground"
+        app:layout_constraintStart_toStartOf="@+id/pricePerOunceBackground"
+        app:layout_constraintTop_toTopOf="@+id/pricePerOunceBackground" />
+
+    <TextView
+        android:id="@+id/pricePerOunceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="$0.25"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/pricePerOunceBackground"
+        app:layout_constraintEnd_toEndOf="@+id/pricePerOunceBackground"
+        app:layout_constraintStart_toStartOf="@+id/pricePerOunceBackground"
+        app:layout_constraintTop_toBottomOf="@+id/pricePerOunceTitle" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/whiteBackgroundContainer"
+        app:srcCompat="@drawable/swell_logo_with_background" />
+
+    <ImageButton
+        android:id="@+id/imageButton7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton8"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton8"
+        app:layout_constraintTop_toTopOf="@+id/imageButton8"
+        app:srcCompat="@drawable/oz8button" />
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/amountDispensedBackground"
+        app:layout_constraintStart_toStartOf="@+id/amountDispensedBackground"
+        app:srcCompat="@drawable/oz12button" />
+
+    <ImageButton
+        android:id="@+id/imageButton10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton8"
+        app:layout_constraintStart_toEndOf="@+id/imageButton8"
+        app:layout_constraintTop_toTopOf="@+id/imageButton8"
+        app:srcCompat="@drawable/oz16button" />
+
+    <ImageButton
+        android:id="@+id/imageButton11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton10"
+        app:layout_constraintStart_toEndOf="@+id/imageButton10"
+        app:layout_constraintTop_toTopOf="@+id/imageButton10"
+        app:srcCompat="@drawable/oz20button" />
+
+    <ImageButton
+        android:id="@+id/imageButton12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton7"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton7"
+        app:layout_constraintTop_toTopOf="@+id/imageButton7"
+        app:srcCompat="@drawable/oz4button" />
+
+    <TextView
+        android:id="@+id/oz4TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/crete_round"
+        android:text="text"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton12"
+        app:layout_constraintStart_toStartOf="@+id/imageButton12"
+        app:layout_constraintTop_toTopOf="@+id/imageButton12" />
+
+    <TextView
+        android:id="@+id/oz8TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/crete_round"
+        android:text="TextView"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton7"
+        app:layout_constraintStart_toStartOf="@+id/imageButton7"
+        app:layout_constraintTop_toTopOf="@+id/oz4TextView" />
+
+    <TextView
+        android:id="@+id/oz16TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/crete_round"
+        android:text="TextView"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton10"
+        app:layout_constraintStart_toStartOf="@+id/imageButton10"
+        app:layout_constraintTop_toTopOf="@+id/oz4TextView" />
+
+    <TextView
+        android:id="@+id/oz20TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/crete_round"
+        android:text="4oz"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton11"
+        app:layout_constraintStart_toStartOf="@+id/imageButton11"
+        app:layout_constraintTop_toTopOf="@+id/oz4TextView" />
+
+    <TextView
+        android:id="@+id/oz12TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/crete_round"
+        android:text="TextView"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton8"
+        app:layout_constraintStart_toStartOf="@+id/imageButton8"
+        app:layout_constraintTop_toTopOf="@+id/oz8TextView" />
+
+</android.support.constraint.ConstraintLayout>

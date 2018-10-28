@@ -36,7 +36,16 @@ dependencies {
     implementation 'com.google.android.gms:play-services-auth:9.8.0'
     implementation 'com.google.android.gms:play-services-location:9.2.0'
     implementation 'com.firebaseui:firebase-ui-auth:4.1.0'
+    implementation 'com.sumup:merchant-sdk:3.0.0'
+    implementation 'com.squareup.sdk:point-of-sale-sdk:2.+'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:0.22.5"
 
 }
 
 apply plugin: 'com.google.gms.google-services'
+kotlin {
+    experimental {
+        coroutines "enable"
+    }
+}
+
